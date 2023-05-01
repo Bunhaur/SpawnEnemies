@@ -12,17 +12,18 @@ public class ChangeTextColor : MonoBehaviour
     private void Start()
     {
         _text = GetComponent<Text>();
-        _changeColor = ChangeColorRed();
+        _changeColor = ChangeColor();
         StartCoroutine(_changeColor);
     }
 
-    IEnumerator ChangeColorRed()
+    IEnumerator ChangeColor()
     {
         int waitTime = 1;
 
+        _text.text = $"\"ESC\" - Stop spawn\n\n\"F\" - Stop timer.";
+
         while (Input.GetKey(KeyCode.Escape) == false)
         {
-            _text.text = $"\"ESC\" - Stop spawn\n\n\"F\" - Stop timer.";
             _text.color = Color.red;
             yield return new WaitForSecondsRealtime(waitTime);
             _text.color = Color.green;

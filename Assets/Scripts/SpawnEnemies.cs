@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SpawnEnemies : MonoBehaviour
 {
@@ -12,8 +11,6 @@ public class SpawnEnemies : MonoBehaviour
 
     private Transform[] _points;
     private IEnumerator _spawner;
-
-    private Text _stopSpawnInfo;
 
     private void Start()
     {
