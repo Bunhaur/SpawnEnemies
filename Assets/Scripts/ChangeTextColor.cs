@@ -20,8 +20,6 @@ public class ChangeTextColor : MonoBehaviour
     {
         int waitTime = 1;
 
-        _text.text = $"\"ESC\" - Stop spawn\n\n\"F\" - Stop timer.";
-
         while (Input.GetKey(KeyCode.Escape) == false)
         {
             _text.color = Color.red;

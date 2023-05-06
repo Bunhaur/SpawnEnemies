@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0fdb5cbb9604144a228c66a0362bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemiePrefab: {fileID: 5431722009879000355, guid: 6df0524379d9bd541ac5d5877816d8ab, type: 3}
+  _template: {fileID: -458661751321815848, guid: 6df0524379d9bd541ac5d5877816d8ab, type: 3}
   _spawnPoints: {fileID: 422999078}
 --- !u!4 &573715949
 Transform:
@@ -586,7 +586,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: '"ESC" - Stop spawn
+
+    "F" - Stop timer'
 --- !u!222 &920900122
 CanvasRenderer:
   m_ObjectHideFlags: 0

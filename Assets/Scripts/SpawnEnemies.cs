@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    [SerializeField] private Object _enemiePrefab;
+    [SerializeField] private Enemie _template;
     [SerializeField] private Transform _spawnPoints;
 
     private float _spawnTime;
@@ -34,18 +34,15 @@ public class SpawnEnemies : MonoBehaviour
         }
     }
 
-    IEnumerator Spawn()
+    private IEnumerator Spawn()
     {
         while (true)
         {
-            Instantiate(_enemiePrefab, _points[_current].position, Quaternion.identity);
-            
+            Instantiate(_template, _points[_current].position, Quaternion.identity);
             _current++;
 
             if (_current == _spawnPoints.childCount)
-            {
                 _current = 0;
-            }
 
             yield return new WaitForSeconds(_spawnTime);
         }
